@@ -1,0 +1,18 @@
+.header {
+    width: 100%;
+    background-color: #333333;
+    height: 50px;
+    margin: 26px 0;
+}
+
+.header .container {
+    position: relative;
+    height: 100%;
+}
+
+.header .container img {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
