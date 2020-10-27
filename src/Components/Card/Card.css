@@ -1,0 +1,7 @@
+.card {
+    box-sizing: border-box;
+    width: calc(20% - 24px);
+    border: 2px solid green;
+    height: 100px;
+    margin:12px;
+}
