@@ -1,22 +1,27 @@
 import React from "react";
-import Character from "./Character";
+import PropTypes from 'prop-types';
+
 import "./Card.css";
 
-function Card() {
+function Card({ character }) {
     return (
         <div className="card">
-            <img src={Character.image} alt={Character.name} />
+            <img src={character.image} alt={character.name} />
             <div className="card-info">
                 <p className="card-info__name">
                     <span>Name:</span>
-                    {Character.name}
+                    {character.name}
                 </p>
                 <p className="card-info__generics">
-                    {Character.species} <span>from</span> {Character.location.name}
+                    {character.species} <span>from</span> {character.location.name}
                 </p>
             </div>
         </div>
     );
+}
+
+Card.propTypes = {
+    character: PropTypes.object.isRequired,
 }
 
 export default Card;
