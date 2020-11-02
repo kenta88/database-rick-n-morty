@@ -2,22 +2,14 @@ import React from 'react';
 import Header from "./Components/Header/Header";
 import Grid from "./Components/Grid/Grid";
 
-import Character from "./Components/Card/Character";
-
 import './App.css';
-
-function timeout(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
 
 class App extends React.Component {
   constructor() {
     super();
     this.state = {
       isLoading: false,
-      characters: [
-        Character
-      ], 
+      characters: [], 
     };
   }
 
@@ -28,9 +20,11 @@ class App extends React.Component {
   fetchCharacters = async () => {
     try {
       this.setState({isLoading: true});
-      await timeout(3000);
+      const response = await fetch("https://rickandmortyapi.com/api/character/?page=1");
+      const json = await response.json();
+      this.setState({characters: json.results});
     } catch(e) {
-
+      console.log(e);
     } finally {
       this.setState({isLoading: false});
     }
