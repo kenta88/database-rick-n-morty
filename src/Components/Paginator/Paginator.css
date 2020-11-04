@@ -1,0 +1,37 @@
+.container.paginator {
+    display:flex;
+    justify-content: flex-end;
+    justify-items: center;
+    margin-bottom:24px;
+}
+
+.paginator p, .paginator button {
+    font-size:14px;
+    color: white;
+}
+
+.paginator p {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.paginator p span {
+    color: #64C940;
+}
+
+.paginator button {
+    width: auto;
+    padding: 0;
+    outline: none;
+    border:0;
+    background-color: transparent;
+    cursor: pointer;
+    height: 18px;
+    box-sizing: content-box;
+}
+
+.paginator button:hover {
+    border-bottom: 1px solid white;
+}

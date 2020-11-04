@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from "./Components/Header/Header";
 import Grid from "./Components/Grid/Grid";
+import Paginator from "./Components/Paginator/Paginator";
 
 import './App.css';
 
@@ -36,6 +37,7 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Grid characters={characters} isLoading={isLoading}/>
+        <Paginator />
       </div>
     );
   }
