@@ -9,6 +9,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
+      currentPage: 10,
+      totalPages: 34,
       isLoading: false,
       characters: [], 
     };
@@ -32,12 +34,16 @@ class App extends React.Component {
   }
 
   render() {
-    const {characters, isLoading} = this.state;
+    const {characters, isLoading, currentPage, totalPages} = this.state;
     return (
       <div className="App">
         <Header />
         <Grid characters={characters} isLoading={isLoading}/>
-        <Paginator />
+        <Paginator 
+          currentPage={currentPage}
+          onChange={(nextPage) => {console.log(nextPage);}}
+          totalPages={totalPages}
+        />
       </div>
     );
   }

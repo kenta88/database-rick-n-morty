@@ -1,17 +1,39 @@
 import React from "react";
+import Proptypes from "prop-types";
 
 import "./Paginator.css";
 
-const Paginator = () => {
+const Paginator = ({ currentPage, onChange, totalPages }) => {
+
+    const onClickPrev = () => {
+        const nextPage = currentPage - 1;
+        if(nextPage > 0) {
+            onChange(nextPage);
+        }
+    };
+
+    const onClickNext = () => {
+        const nextPage = currentPage + 1;
+        if(nextPage <= totalPages) {
+            onChange(nextPage);
+        }
+    };
+
     return(
         <div className="container paginator">
-            <button>Prev</button>
+            <button onClick={onClickPrev}>Prev</button>
             <p>
-                Page <span>1</span> of 34
+                Page <span>{currentPage}</span> of {totalPages}
             </p>
-            <button>Next</button>
+            <button onClick={onClickNext}>Next</button>
         </div>
     );
 };
+
+Paginator.propTypes = {
+    currentPage: Proptypes.number.isRequired,
+    totalPages: Proptypes.number.isRequired,
+    onChange: Proptypes.func.isRequired,
+}
 
 export default Paginator;
