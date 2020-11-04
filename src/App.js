@@ -9,8 +9,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentPage: 10,
-      totalPages: 34,
+      currentPage: 1,
+      totalPages: 1,
       isLoading: false,
       characters: [], 
     };
@@ -20,17 +20,41 @@ class App extends React.Component {
     this.fetchCharacters();
   }
 
+  componentDidUpdate = (prevProps, prevState) => {
+    if(prevState.currentPage !== this.state.currentPage) {
+      this.fetchCharacters();
+    }
+  }
+
   fetchCharacters = async () => {
     try {
       this.setState({isLoading: true});
-      const response = await fetch("https://rickandmortyapi.com/api/character/?page=1");
+
+      const url = new URL("https://rickandmortyapi.com/api/character");
+
+      const params = {
+        page: this.state.currentPage,
+      };
+
+      Object.keys(params).forEach((key) => {
+        url.searchParams.append(key, params[key]);
+      })
+
+      const response = await fetch(url);
       const json = await response.json();
-      this.setState({characters: json.results});
+      this.setState({
+        characters: json.results,
+        totalPages: json.info.pages,
+      });
     } catch(e) {
       console.log(e);
     } finally {
       this.setState({isLoading: false});
     }
+  }
+
+  onPaginatorChange = (nextPage) => {
+    this.setState({currentPage: nextPage});
   }
 
   render() {
@@ -41,7 +65,7 @@ class App extends React.Component {
         <Grid characters={characters} isLoading={isLoading}/>
         <Paginator 
           currentPage={currentPage}
-          onChange={(nextPage) => {console.log(nextPage);}}
+          onChange={this.onPaginatorChange}
           totalPages={totalPages}
         />
       </div>
