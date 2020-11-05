@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "./Components/Header/Header";
 import Grid from "./Components/Grid/Grid";
 import Paginator from "./Components/Paginator/Paginator";
+import SearchBox from "./Components/SearchBox/SearchBox";
 
 import './App.css';
 
@@ -62,6 +63,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Header />
+        <SearchBox />
         <Grid characters={characters} isLoading={isLoading}/>
         <Paginator 
           currentPage={currentPage}
