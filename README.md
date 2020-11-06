@@ -1,6 +1,8 @@
 # DATABASE RICK N'MORTY 
 ## Applicazione realizzata per il corso react da 0 a 1
 
+![logo](https://media1.giphy.com/media/3o85xuO1siCT147FrG/giphy.gif)
+
 Questo progetto é stato realizzato con [Create React App](https://github.com/facebook/create-react-app).
 
 ## Scripts Disponibili
