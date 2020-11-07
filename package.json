@@ -2,7 +2,7 @@
   "name": "database-rick-n-morty",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://kenta88.github.io/database-rick-n-morty",
+  "homepage": "http://kenta88.github.io/database-rick-n-morty/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
