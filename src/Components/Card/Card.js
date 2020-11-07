@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 
 import "./Card.css";
 
-function Card({ character, isSelected }) {
+function Card({ character, isSelected, onSelectChange }) {
+    const onClickButton = () => {
+        onSelectChange(character.id, isSelected);
+    }
     const selectedClass = isSelected ? "selected" : "";
     return (
         <div className={`card ${selectedClass}`}>
@@ -17,7 +20,7 @@ function Card({ character, isSelected }) {
                     {character.species} <span>from</span> {character.location.name}
                 </p>
             </div>
-            <button className="favourite">
+            <button className="favourite" onClick={onClickButton}>
                 {isSelected ? "Remove" : "Add"}
             </button>
         </div>
@@ -27,6 +30,7 @@ function Card({ character, isSelected }) {
 Card.propTypes = {
     character: PropTypes.object.isRequired,
     isSelected: PropTypes.bool.isRequired,
+    onSelectChange: PropTypes.func.isRequired,
 }
 
 export default Card;
