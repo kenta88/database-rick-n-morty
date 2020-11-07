@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/database-rick-n-morty/static/css/main.70544762.chunk.css",
+    "main.js": "/database-rick-n-morty/static/js/main.dad71a23.chunk.js",
+    "main.js.map": "/database-rick-n-morty/static/js/main.dad71a23.chunk.js.map",
+    "runtime-main.js": "/database-rick-n-morty/static/js/runtime-main.e55fea5f.js",
+    "runtime-main.js.map": "/database-rick-n-morty/static/js/runtime-main.e55fea5f.js.map",
+    "static/js/2.9a141841.chunk.js": "/database-rick-n-morty/static/js/2.9a141841.chunk.js",
+    "static/js/2.9a141841.chunk.js.map": "/database-rick-n-morty/static/js/2.9a141841.chunk.js.map",
+    "index.html": "/database-rick-n-morty/index.html",
+    "precache-manifest.19a4919ab3415f38a715e5430529c359.js": "/database-rick-n-morty/precache-manifest.19a4919ab3415f38a715e5430529c359.js",
+    "service-worker.js": "/database-rick-n-morty/service-worker.js",
+    "static/css/main.70544762.chunk.css.map": "/database-rick-n-morty/static/css/main.70544762.chunk.css.map",
+    "static/js/2.9a141841.chunk.js.LICENSE.txt": "/database-rick-n-morty/static/js/2.9a141841.chunk.js.LICENSE.txt",
+    "static/media/logo-rick-n-morty.png": "/database-rick-n-morty/static/media/logo-rick-n-morty.005e3536.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e55fea5f.js",
+    "static/js/2.9a141841.chunk.js",
+    "static/css/main.70544762.chunk.css",
+    "static/js/main.dad71a23.chunk.js"
+  ]
+}
