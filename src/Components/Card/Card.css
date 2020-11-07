@@ -5,6 +5,11 @@
     margin:12px;
     background-color: #333333;
     padding:12px;
+    position: relative;
+}
+
+.card.selected {
+    border: 6px solid #1E8FAA;
 }
 
 .card img {
@@ -33,4 +38,21 @@
 
 .card p.card-info__generics span {
     font-weight: normal;
+}
+
+.card button.favourite {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+
+    background-color:#1E8FAA;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.card:hover button.favourite {
+    display: block;
 }
