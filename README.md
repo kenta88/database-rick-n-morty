@@ -2,7 +2,6 @@
 ## Applicazione realizzata per il corso react da 0 a 1
 
 ![logo](https://media1.giphy.com/media/3o85xuO1siCT147FrG/giphy.gif)
-![app](https://i.ibb.co/VJVFxkH/appricknmorty.gif)
 
 [App su github pages](https://kenta88.github.io/database-rick-n-morty/)
 
