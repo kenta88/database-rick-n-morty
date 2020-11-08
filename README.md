@@ -3,8 +3,6 @@
 
 ![logo](https://media1.giphy.com/media/3o85xuO1siCT147FrG/giphy.gif)
 
-![app](http://alessiodicrescenzo.com/appricknmorty.gif)
-
 [App su github pages](https://kenta88.github.io/database-rick-n-morty/)
 
 Questo progetto é stato realizzato con [Create React App](https://github.com/facebook/create-react-app).
